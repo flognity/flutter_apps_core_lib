@@ -1,3 +1,0 @@
-[submodule "material_color_generator"]
-	path = lib/src/app_theme/material_color_generator
-	url = https://gist.github.com/3818d7c586a18c2dfc502ccb87dc5074.git
