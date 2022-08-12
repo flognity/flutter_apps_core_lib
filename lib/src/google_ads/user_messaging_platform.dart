@@ -21,10 +21,10 @@ class _UserConsentWrapperState extends State<UserConsentWrapper> {
   ConsentInformation? _consentInformation;
 
   // Settings for ConsentRequestParameters
-  bool _tagAsUnderAgeOfConsent = false;
-  bool _debugSettings = true;
+  final bool _tagAsUnderAgeOfConsent = false;
+  final bool _debugSettings = true;
   String? _testDeviceId;
-  DebugGeography _debugGeography = DebugGeography.EEA;
+  final DebugGeography _debugGeography = DebugGeography.EEA;
 
   @override
   void initState() {

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DataTableShowcase extends StatelessWidget {
+  const DataTableShowcase({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return DataTable(

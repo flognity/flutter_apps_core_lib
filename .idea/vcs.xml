@@ -2,8 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lib/app_theme/material_color_generator" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lib/google_ads" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lib/language_provider" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/src/app_theme/material_color_generator" vcs="Git" />
   </component>
 </project>

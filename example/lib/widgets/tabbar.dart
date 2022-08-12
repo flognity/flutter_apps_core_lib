@@ -14,6 +14,8 @@ class ExpansionPanelItem {
 }
 
 class TabBarShowcase extends StatefulWidget {
+  const TabBarShowcase({Key? key}) : super(key: key);
+
   @override
   _TabBarShowcaseState createState() => _TabBarShowcaseState();
 }
@@ -41,7 +43,7 @@ class _TabBarShowcaseState extends State<TabBarShowcase>
     return Column(children: [
       TabBar(
         controller: _tabController,
-        tabs: <Widget>[
+        tabs: const <Widget>[
           Tab(
             text: 'Text Tab',
             icon: Icon(Icons.text_fields),

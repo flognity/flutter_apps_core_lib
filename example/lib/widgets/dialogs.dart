@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DialogShowcase extends StatelessWidget {
+  const DialogShowcase({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -8,7 +10,7 @@ class DialogShowcase extends StatelessWidget {
       children: [
         Column(
           children: [
-            Text('Open a dialog:'),
+            const Text('Open a dialog:'),
             ElevatedButton(
               onPressed: () => showDialog<String>(
                 context: context,
@@ -33,14 +35,14 @@ class DialogShowcase extends StatelessWidget {
         ),
         Column(
           children: [
-            Text('Open a modal bottom sheet:'),
+            const Text('Open a modal bottom sheet:'),
             ElevatedButton(
               onPressed: () => showModalBottomSheet<void>(
                 context: context,
                 builder: (BuildContext context) => Container(
                   child: Column(
                     children: [
-                      Text('Modal BottomSheet'),
+                      const Text('Modal BottomSheet'),
                       ElevatedButton(
                         child: const Text('Close BottomSheet'),
                         onPressed: () => Navigator.pop(context),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ChipShowcase extends StatefulWidget {
+  const ChipShowcase({Key? key}) : super(key: key);
+
   @override
   _ChipShowcaseState createState() => _ChipShowcaseState();
 }
@@ -8,8 +10,9 @@ class ChipShowcase extends StatefulWidget {
 class _ChipShowcaseState extends State<ChipShowcase> {
   int? _selectedInputChip = 1;
   int? _selectedChoiceChip = 1;
-  List<String> _values = ['Input Chip 1', 'Input Chip 2'];
-  TextEditingController _textEditingController = new TextEditingController();
+  final List<String> _values = ['Input Chip 1', 'Input Chip 2'];
+  final TextEditingController _textEditingController =
+      new TextEditingController();
 
   void addChip(String newChipValue) {
     if (newChipValue != '') {
@@ -37,8 +40,8 @@ class _ChipShowcaseState extends State<ChipShowcase> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 8.0),
+        const Padding(
+          padding: EdgeInsets.only(top: 8.0),
           child: Text('Chips:'),
         ),
         Wrap(
@@ -46,10 +49,10 @@ class _ChipShowcaseState extends State<ChipShowcase> {
           spacing: 8.0, // gap between adjacent chips
           runSpacing: 0.0, // gap between lines
           children: [
-            Chip(
+            const Chip(
               label: Text('Chip'),
             ),
-            Chip(
+            const Chip(
               label: Text('Avatar Chip'),
               avatar: FlutterLogo(),
             ),
@@ -61,8 +64,8 @@ class _ChipShowcaseState extends State<ChipShowcase> {
             ),
           ],
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 8.0),
+        const Padding(
+          padding: EdgeInsets.only(top: 8.0),
           child: Text('Choice Chips:'),
         ),
         Wrap(
@@ -74,7 +77,7 @@ class _ChipShowcaseState extends State<ChipShowcase> {
             (int index) {
               return ChoiceChip(
                 label: Text('Choice Chip $index'),
-                avatar: CircleAvatar(
+                avatar: const CircleAvatar(
                   child: FlutterLogo(),
                 ),
                 //onPressed: () {},
@@ -88,8 +91,8 @@ class _ChipShowcaseState extends State<ChipShowcase> {
             },
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 8.0),
+        const Padding(
+          padding: EdgeInsets.only(top: 8.0),
           child: Text('Selectable Input Chips:'),
         ),
         Wrap(
@@ -101,7 +104,7 @@ class _ChipShowcaseState extends State<ChipShowcase> {
             (int index) {
               return InputChip(
                 label: Text('Input Chip $index'),
-                avatar: FlutterLogo(),
+                avatar: const FlutterLogo(),
                 tooltip: 'This is Input Chip $index',
                 onSelected: (bool selected) {
                   setState(() {
@@ -113,7 +116,7 @@ class _ChipShowcaseState extends State<ChipShowcase> {
             },
           ),
         ),
-        Text('Deletable Input Chips:'),
+        const Text('Deletable Input Chips:'),
         Wrap(
           alignment: WrapAlignment.start,
           spacing: 8.0, // gap between adjacent chips
@@ -122,7 +125,7 @@ class _ChipShowcaseState extends State<ChipShowcase> {
             for (int index = 0; index < _values.length; index++)
               InputChip(
                 label: Text(_values[index]),
-                avatar: FlutterLogo(),
+                avatar: const FlutterLogo(),
                 tooltip: 'This is Input Chip $index',
                 onDeleted: () {
                   setState(() {
@@ -139,7 +142,7 @@ class _ChipShowcaseState extends State<ChipShowcase> {
                 onSubmitted: addChip,
                 key: const Key('TextFieldForChips'),
                 controller: _textEditingController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: 'Add more chips',
                 ),
               ),
@@ -148,7 +151,7 @@ class _ChipShowcaseState extends State<ChipShowcase> {
                 onPressed: () {
                   addChip(_textEditingController.text.toLowerCase());
                 },
-                child: Text('add chip'))
+                child: const Text('add chip'))
           ],
         ),
       ],

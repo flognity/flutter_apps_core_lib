@@ -1,5 +1,5 @@
 /* ****************************************************************************
- * Copyright (c) 2021 flognity
+ * Copyright (c) 2022 flognity
  * This code was written by flognity (Florian Wilhelm)
  * If distributed, this comment shall be included in all copies the Software.
  *
@@ -45,8 +45,6 @@ import 'dart:collection';
 import 'package:flutter/foundation.dart' show SynchronousFuture;
 import 'package:flutter/material.dart';
 
-import '../../lang/text_provider.dart'; //This import must implement the abstract class BaseTextProvider
-
 ///abstract base class that should be implemented by a TextProvider class
 abstract class BaseTextProvider {
   static const List<String> _supportedLanguages = [];
@@ -55,6 +53,42 @@ abstract class BaseTextProvider {
 
   UnmodifiableListView<String> get getSupportedLanguages =>
       UnmodifiableListView(_supportedLanguages);
+  UnmodifiableMapView<String, Map<String, String>> get getTextProviderValues =>
+      UnmodifiableMapView(_textProviderValues);
+}
+
+///TODO: refactor and generalize. This is just an example of the implementation
+///      but we want a base class here!!!
+class LangCode {
+  static const en = 'en';
+  static const de = 'de';
+  static const fr = 'fr';
+  static const es = 'es';
+}
+
+class TextProvider implements BaseTextProvider {
+  static final List<String> _supportedLanguages = [
+    LangCode.en,
+    LangCode.de,
+    LangCode.fr,
+    LangCode.es,
+  ];
+  static final Map<String, Map<String, String>> _textProviderValues =
+      <String, Map<String, String>>{
+    'total': {
+      LangCode.en: 'Total',
+      LangCode.de: 'Gesamt',
+      LangCode.fr: 'Résultat',
+      LangCode.es: 'Resultado',
+    },
+  };
+  TextProvider();
+
+  @override
+  UnmodifiableListView<String> get getSupportedLanguages =>
+      UnmodifiableListView(_supportedLanguages);
+
+  @override
   UnmodifiableMapView<String, Map<String, String>> get getTextProviderValues =>
       UnmodifiableMapView(_textProviderValues);
 }

@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:material_components_showcase/widgets/buttons.dart';
-import 'package:material_components_showcase/widgets/chips.dart';
-import 'package:material_components_showcase/widgets/data_tables.dart';
-import 'package:material_components_showcase/widgets/dialogs.dart';
-import 'package:material_components_showcase/widgets/progress_indicators.dart';
-import 'package:material_components_showcase/widgets/tabbar.dart';
-import 'package:material_components_showcase/widgets/toggles.dart';
+
+import '../widgets/buttons.dart';
+import '../widgets/chips.dart';
+import '../widgets/data_tables.dart';
+import '../widgets/dialogs.dart';
+import '../widgets/progress_indicators.dart';
+import '../widgets/tabbar.dart';
+import '../widgets/toggles.dart';
 
 class WidgetWrapper extends StatelessWidget {
   final String name;
   final Widget child;
-  WidgetWrapper({required this.name, required this.child});
+  const WidgetWrapper({Key? key, required this.name, required this.child})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class MaterialShowcaseScreen {
       WidgetWrapper(
         name: 'Chips, Checkboxes and Radios',
         child: ListView(
-          children: [
+          children: const [
             ChipShowcase(),
             SizedBox(
               height: 20.0,
@@ -42,15 +44,15 @@ class MaterialShowcaseScreen {
               style: Theme.of(context).textTheme.headline4,
               textAlign: TextAlign.center,
             ),
-            ButtonShowcase(),
-            Divider(
+            const ButtonShowcase(),
+            const Divider(
               thickness: 8,
             ),
-            DialogShowcase(),
-            Divider(
+            const DialogShowcase(),
+            const Divider(
               thickness: 8,
             ),
-            ProgressIndicatorsShowcase(),
+            const ProgressIndicatorsShowcase(),
           ],
         ),
       ),
@@ -63,7 +65,7 @@ class MaterialShowcaseScreen {
               style: Theme.of(context).textTheme.headline4,
               textAlign: TextAlign.center,
             ),
-            TabBarShowcase(),
+            const TabBarShowcase(),
           ],
         ),
       ),
@@ -76,7 +78,7 @@ class MaterialShowcaseScreen {
               style: Theme.of(context).textTheme.headline4,
               textAlign: TextAlign.center,
             ),
-            DataTableShowcase(),
+            const DataTableShowcase(),
           ],
         ),
       ),

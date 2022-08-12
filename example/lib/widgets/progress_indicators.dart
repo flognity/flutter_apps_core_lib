@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ProgressIndicatorsShowcase extends StatefulWidget {
+  const ProgressIndicatorsShowcase({Key? key}) : super(key: key);
+
   @override
   State<ProgressIndicatorsShowcase> createState() =>
       _ProgressIndicatorsShowcaseState();
@@ -39,20 +41,20 @@ class _ProgressIndicatorsShowcaseState extends State<ProgressIndicatorsShowcase>
         children: <Widget>[
           Column(
             children: [
-              Text('Circular Progress Indicator'),
-              SizedBox(height: 10.0),
+              const Text('Circular Progress Indicator'),
+              const SizedBox(height: 10.0),
               CircularProgressIndicator(
                 value: controller.value,
                 semanticsLabel: 'Linear progress indicator',
               ),
             ],
           ),
-          SizedBox(width: 20.0),
+          const SizedBox(width: 20.0),
           Expanded(
             child: Column(
               children: [
-                Text('Linear Progress Indicator'),
-                SizedBox(height: 10.0),
+                const Text('Linear Progress Indicator'),
+                const SizedBox(height: 10.0),
                 LinearProgressIndicator(
                   value: controller.value,
                   semanticsLabel: 'Linear progress indicator',

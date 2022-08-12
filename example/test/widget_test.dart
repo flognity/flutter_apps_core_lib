@@ -5,16 +5,13 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_apps_core_lib_example/widgets/buttons.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:material_components_showcase/widgets/buttons.dart';
 
 class MaterialAppCreator extends StatelessWidget {
   final Widget child;
-  MaterialAppCreator({required this.child});
+  const MaterialAppCreator({Key? key, required this.child}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +25,7 @@ Type typeOf<T>() => T;
 void main() {
   testWidgets('ButtonShowcase Smoke Test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(MaterialAppCreator(child: ButtonShowcase()));
+    await tester.pumpWidget(const MaterialAppCreator(child: ButtonShowcase()));
 
     //Make sure there is at least one of each of the following widgets
     List<Type> _buttonList = [

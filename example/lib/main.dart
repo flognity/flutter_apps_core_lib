@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:material_components_showcase/screens/material_showcase.dart';
+import 'package:flutter_apps_core_lib_example/screens/material_showcase.dart';
 
 import 'globals.dart';
 
 void main() {
-  runApp(MaterialShowcaseApp());
+  runApp(const MaterialShowcaseApp());
 }
 
 class MaterialShowcaseApp extends StatefulWidget {
+  const MaterialShowcaseApp({Key? key}) : super(key: key);
+
   @override
   _MaterialShowcaseAppState createState() => _MaterialShowcaseAppState();
 }
 
 class _MaterialShowcaseAppState extends State<MaterialShowcaseApp> {
   final _messengerKey = GlobalKey<ScaffoldMessengerState>();
-  GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
@@ -43,7 +45,7 @@ class _MaterialShowcaseAppState extends State<MaterialShowcaseApp> {
       home: Scaffold(
         key: _scaffoldKey,
         appBar: AppBar(
-          title: Text('Title of the AppBar'),
+          title: const Text('Title of the AppBar'),
           actions: <Widget>[
             TextButton(
               onPressed: () {},
@@ -66,7 +68,7 @@ class _MaterialShowcaseAppState extends State<MaterialShowcaseApp> {
           items: [
             for (int index = 0; index < _widgetList.length; index++)
               BottomNavigationBarItem(
-                icon: Icon(Icons.settings),
+                icon: const Icon(Icons.settings),
                 label: _widgetList[index].name,
               ),
           ],
@@ -77,12 +79,12 @@ class _MaterialShowcaseAppState extends State<MaterialShowcaseApp> {
           child: ListView(
             padding: EdgeInsets.zero,
             children: <Widget>[
-              DrawerHeader(
+              const DrawerHeader(
                 child: Text('Drawer Header'),
               ),
               for (int index = 0; index < _widgetList.length; index++)
                 ListTile(
-                  leading: Icon(Icons.settings),
+                  leading: const Icon(Icons.settings),
                   title: Text(_widgetList[index].name),
                   onTap: () {
                     _onItemTapped(index);

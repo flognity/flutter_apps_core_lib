@@ -1,4 +1,4 @@
-import 'package:material_components_showcase/util/app_theme/app_theme.dart';
+import 'package:flutter_apps_core_lib/flutter_apps_core_lib.dart';
 
 /* **********************
  * Global properties
@@ -8,5 +8,5 @@ class Globals with AppTheme {
 
   static AppTheme appTheme = AppTheme();
 
-  static const String appName = 'Basic To Do List App';
+  static const String appName = 'Flutter Material Showcase App';
 }

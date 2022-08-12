@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ButtonShowcase extends StatefulWidget {
+  const ButtonShowcase({Key? key}) : super(key: key);
+
   @override
   _ButtonShowcaseState createState() => _ButtonShowcaseState();
 }
@@ -67,8 +69,8 @@ class _ButtonShowcaseState extends State<ButtonShowcase> {
             ),
             RoundButtonBuilder(
               label: 'Circle Avatar',
-              child: CircleAvatar(
-                child: const Icon(Icons.add_a_photo),
+              child: const CircleAvatar(
+                child: Icon(Icons.add_a_photo),
               ),
             )
           ],
@@ -123,7 +125,8 @@ class _ButtonShowcaseState extends State<ButtonShowcase> {
 class ButtonBuilder extends StatelessWidget {
   final Widget child;
   final String label;
-  ButtonBuilder({required this.child, this.label = ''});
+  const ButtonBuilder({Key? key, required this.child, this.label = ''})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -136,7 +139,7 @@ class ButtonBuilder extends StatelessWidget {
                     label,
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15.0,
                   ),
                   child,
@@ -151,7 +154,8 @@ class ButtonBuilder extends StatelessWidget {
 class RoundButtonBuilder extends StatelessWidget {
   final Widget child;
   final String label;
-  RoundButtonBuilder({required this.child, this.label = ''});
+  const RoundButtonBuilder({Key? key, required this.child, this.label = ''})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

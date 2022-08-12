@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TogglesShowcase extends StatefulWidget {
+  const TogglesShowcase({Key? key}) : super(key: key);
+
   @override
   _TogglesShowcaseState createState() => _TogglesShowcaseState();
 }
