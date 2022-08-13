@@ -60,11 +60,10 @@ Update your app's ios/Runner/Info.plist file to add two keys:
 
 Initialize the Mobile Ads SDK before the App is run, by placing the initializer before the runApp instruction. Wrap your App in the UserConsentWrapper to include the user consent form:
 ```
-import './util/google_ads/ad_state.dart';
-import './util/google_ads/user_messaging_platform.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_apps_core_lib/flutter_apps_core_lib.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
