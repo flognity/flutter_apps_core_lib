@@ -1,3 +1,8 @@
+/* ****************************************************************************
+ * Copyright (c) 2022 flognity
+ * This code was written by flognity (Florian Wilhelm)
+ * If distributed, this comment shall be included in all copies the Software.
+***************************************************************************** */
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:user_messaging_platform/user_messaging_platform.dart';

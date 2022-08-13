@@ -1,3 +1,8 @@
+/* ****************************************************************************
+ * Copyright (c) 2022 flognity
+ * This code was written by flognity (Florian Wilhelm)
+ * If distributed, this comment shall be included in all copies the Software.
+***************************************************************************** */
 import 'package:flutter/material.dart';
 
 import './material_color_generator/material_color_generator.dart';
